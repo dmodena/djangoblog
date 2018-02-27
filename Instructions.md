@@ -20,3 +20,4 @@ Django project creation steps
 - Create Github project and push code
 - Enable build for Github in Travis-CI
 - Create new **.travis.yml** file
+- Save pip requirements to file `pip freeze > requirements.txt`
