@@ -32,3 +32,7 @@ Django project creation steps
 - Create MVC for listing and creating new posts
 - Install dj-database-config `pip install dj-database-config` and add to **requirements.txt**
 - Get config from prod db using dj-database-config
+- Access application from cli `heroku run bash`
+- Export SECRET_KEY to bash
+- Run migrations in prod environment `python manage.py migrate --settings=djangoblog.settings.prod`
+- Test creating and listing posts in prod
