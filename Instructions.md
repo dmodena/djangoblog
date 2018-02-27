@@ -17,3 +17,6 @@ Django project creation steps
 - Add '\*.sqlite3' to .gitignore
 - Run migrations `python manage.py migrate`
 - Initialize git repo and commit
+- Create Github project and push code
+- Enable build for Github in Travis-CI
+- Create new **.travis.yml** file
