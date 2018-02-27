@@ -27,3 +27,4 @@ Django project creation steps
 - Add Heroku project name to prod ALLOWED_HOSTS
 - Add Heroku API key to environment variable in Travis CI
 - Update **.travis.yml** with deploy info
+- Create simple url to home template such as "Hello World" for testing
