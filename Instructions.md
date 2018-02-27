@@ -30,3 +30,5 @@ Django project creation steps
 - Create simple url to home template such as "Hello World" for testing
 - Create Post model and migrate db
 - Create MVC for listing and creating new posts
+- Install dj-database-config `pip install dj-database-config` and add to **requirements.txt**
+- Get config from prod db using dj-database-config
