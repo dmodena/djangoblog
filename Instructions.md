@@ -1,0 +1,19 @@
+Django project creation steps
+--------------------
+- Install python (with pip)
+- Install django `pip install django`
+- Create django project `django-admin startproject djangoblog`
+- Enter djangoblog and create django app `python manage.py startapp core`
+- Add python .gitignore
+- Move **djangoblog/djangoblog/settings.py** to **djangoblog/djangoblog/settings/base.py**
+- Create **djangoblog/djangoblog/settings/dev.py** and **djangoblog/djangoblog/settings/prod.py**
+- Add 'core' to **base.py** under INSTALLED_APPS
+- Install python-decouple `pip install python-decouple`
+- Move SECRET_KEY from **base.py** to a **.env** file in the project's main folder
+- Inside **dev.py** read SECRET_KEY from file using python-decouple
+- Import **base.py** inside **dev.py** and **prod.py**
+- Inside **wsgi.py** set DJANGO_SETTINGS_MODULE to 'djangoblog.settings.prod'
+- Inside **manage.py** set DJANGO_SETTINGS_MODULE to 'djangoblog.settings.dev'
+- Add '\*.sqlite3' to .gitignore
+- Run migrations `python manage.py migrate`
+- Initialize git repo and commit
