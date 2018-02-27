@@ -1,6 +1,8 @@
 from django.urls import path
-from core.views import home
+from core import views
 
 urlpatterns = [
-    path('', home),
+    path('', views.home),
+    path('lista-todos/', views.lista),
+    path('novo/', views.novo),
 ]
