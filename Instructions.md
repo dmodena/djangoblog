@@ -22,3 +22,8 @@ Django project creation steps
 - Enable build for Github in Travis-CI
 - Create new **.travis.yml** file
 - Save pip requirements to file `pip freeze > requirements.txt`
+- Create Heroku project
+- Create **Procfile** for Heroku
+- Add Heroku project name to prod ALLOWED_HOSTS
+- Add Heroku API key to environment variable in Travis CI
+- Update **.travis.yml** with deploy info
