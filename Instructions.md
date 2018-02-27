@@ -11,6 +11,7 @@ Django project creation steps
 - Install python-decouple `pip install python-decouple`
 - Move SECRET_KEY from **base.py** to a **.env** file in the project's main folder
 - Inside **dev.py** read SECRET_KEY from file using python-decouple
+- Inside **prod.py** read SECRET_KEY from environment variable set in Travis CI and Heroku
 - Import **base.py** inside **dev.py** and **prod.py**
 - Inside **wsgi.py** set DJANGO_SETTINGS_MODULE to 'djangoblog.settings.prod'
 - Inside **manage.py** set DJANGO_SETTINGS_MODULE to 'djangoblog.settings.dev'
