@@ -1,19 +1,24 @@
+{% load static %}
+
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Lista dos posts</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Lista dos posts</h1>
-
-  {% for post in lista_posts %}
-    <article>
-      <h2>{{post.titulo}}</h2>
-      <span>{{post.texto}}</span>
-      <a href="{% url 'atualizar' post.id %}">Atualizar</a>
-      <a href="{% url 'deletar' post.id %}">Deletar</a>      
-    </article>
-  {% endfor %}
+  <div class="container">
+    <img src="{% static 'img/logo.png' %}" width="100" height="100" />
+    <h1>Lista dos posts</h1>
+    {% for post in lista_posts %}
+      <article>
+        <h2>{{post.titulo}}</h2>
+        <span>{{post.texto}}</span>
+        <a href="{% url 'atualizar' post.id %}" class="btn btn-info">Atualizar</a>
+        <a href="{% url 'deletar' post.id %}" class="btn btn-danger">Deletar</a>
+      </article>
+    {% endfor %}
+  </div>
 </body>
 </html>
