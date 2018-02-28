@@ -21,6 +21,7 @@ Django project creation steps
 - Create Github project and push code
 - Enable build for Github in Travis-CI
 - Create new **.travis.yml** file
+- Install gunicorn, psycopg2 and dj-database-url `pip install gunicorn psycopg2 dj-database-url`
 - Save pip requirements to file `pip freeze > requirements.txt`
 - Create Heroku project
 - Create **Procfile** for Heroku
@@ -30,9 +31,9 @@ Django project creation steps
 - Create simple url to home template such as "Hello World" for testing
 - Create Post model and migrate db
 - Create MVC for listing and creating new posts
-- Install dj-database-config `pip install dj-database-config` and add to **requirements.txt**
-- Get config from prod db using dj-database-config
+- Get config from prod db using dj-database-url config
 - Access application from cli `heroku run bash`
 - Export SECRET_KEY to bash
 - Run migrations in prod environment `python manage.py migrate --settings=djangoblog.settings.prod`
 - Test creating and listing posts in prod
+- Finish CRUD and test in prod

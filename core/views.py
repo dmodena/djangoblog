@@ -18,3 +18,18 @@ def novo(request):
             form.save()
             return redirect(lista)
     return render(request, 'core/novo.html', {'form': form})
+
+def atualiza(request, id):
+    post = Post.objects.get(id=id)
+    form = PostForm(request.POST or None, instance=post)
+
+    if form.is_valid():
+        form.save()
+        return redirect(lista)
+
+    return render(request, 'core/novo.html', {'form': form})
+
+def deletar(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect(lista)

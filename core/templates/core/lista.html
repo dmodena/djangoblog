@@ -11,6 +11,8 @@
     <article>
       <h2>{{post.titulo}}</h2>
       <span>{{post.texto}}</span>
+      <a href="{% url 'atualizar' post.id %}">Atualizar</a>
+      <a href="{% url 'deletar' post.id %}">Deletar</a>      
     </article>
   {% endfor %}
 </body>
